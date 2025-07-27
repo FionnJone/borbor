@@ -1,0 +1,15 @@
+#!name= 小橘充电去广告
+#!desc= 屏蔽滴滴小橘充电中的营销广告与活动弹窗等
+#!author= 你自己的名字
+#!homepage= https://energy.xiaojukeji.com
+#!icon= https://s3.ap-northeast-1.amazonaws.com/static.icon/path/to/icon.png
+#!tag= 去广告,小橘充电,滴滴能源
+
+[mitm]
+hostname = energy.xiaojukeji.com
+
+[rule]
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
